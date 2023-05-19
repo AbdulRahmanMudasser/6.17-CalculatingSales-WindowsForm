@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.productNumberTextBox = new System.Windows.Forms.TextBox();
+            this.quantitySoldTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.totalRetailPriceTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // productNumberTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 0;
+            this.productNumberTextBox.Location = new System.Drawing.Point(249, 52);
+            this.productNumberTextBox.Name = "productNumberTextBox";
+            this.productNumberTextBox.Size = new System.Drawing.Size(100, 26);
+            this.productNumberTextBox.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // quantitySoldTextBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(187, 156);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 1;
+            this.quantitySoldTextBox.Location = new System.Drawing.Point(249, 156);
+            this.quantitySoldTextBox.Name = "quantitySoldTextBox";
+            this.quantitySoldTextBox.Size = new System.Drawing.Size(100, 26);
+            this.quantitySoldTextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Product Number";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -63,19 +66,49 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(32, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.label2.Text = "Quantity Sold";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(36, 355);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Calculate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 263);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Total Retail Price";
+            // 
+            // totalRetailPriceTextBox
+            // 
+            this.totalRetailPriceTextBox.Location = new System.Drawing.Point(249, 257);
+            this.totalRetailPriceTextBox.Name = "totalRetailPriceTextBox";
+            this.totalRetailPriceTextBox.ReadOnly = true;
+            this.totalRetailPriceTextBox.Size = new System.Drawing.Size(100, 26);
+            this.totalRetailPriceTextBox.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.totalRetailPriceTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.quantitySoldTextBox);
+            this.Controls.Add(this.productNumberTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -85,10 +118,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox productNumberTextBox;
+        private System.Windows.Forms.MaskedTextBox quantitySoldTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox totalRetailPriceTextBox;
     }
 }
 
